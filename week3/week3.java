@@ -83,7 +83,7 @@ public class week3{
     public static void main(String[] args){
         Employee[] emparray = new Employee[2]; 
         Employee e = new Employee("name", 20); 
-        Manager m = new Manager(null, 0, null); 
+        Manager m = new Manager("ghorai", 100, "sg"); 
 
         emparray[0] = e; 
         emparray[1] = m; 
@@ -91,7 +91,7 @@ public class week3{
         // every employee of the emparray will have their respective bonus function 
         // although one is employee and the other is manager
         for (int i = 0; i < emparray.length; i++){
-            System.out.print(emparray[i].bonus(5));
+            System.out.println(emparray[i].bonus(5));
         }
 
         double[] darr = new double[100]; 
@@ -103,5 +103,7 @@ public class week3{
         // type cast 
         double d = 29.39; 
         int nd = (int) d; // --> 29
+
+        System.out.println(nd);
     }
 }
