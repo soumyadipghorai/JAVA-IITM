@@ -11,6 +11,8 @@
  * int[] a = new int[100] ==> from that logic this makes sense  
  */
 
+import java.util.Arrays;
+
 class Employee{
     private String name; 
     private double salary; 
@@ -69,6 +71,15 @@ class Manager extends Employee{
 }
 
 public class week3{
+    public int find(Object[] objarr, Object o){
+        int i; 
+        for (i = 0; i < objarr.length; i++){
+            if (objarr[i] == o){
+                return i;
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args){
         Employee[] emparray = new Employee[2]; 
         Employee e = new Employee("name", 20); 
@@ -79,8 +90,18 @@ public class week3{
 
         // every employee of the emparray will have their respective bonus function 
         // although one is employee and the other is manager
-        for (var i = 0; i < emparray.length; i++){
-            System.out.print(emparray[i].bonus(5.0));
+        for (int i = 0; i < emparray.length; i++){
+            System.out.print(emparray[i].bonus(5));
         }
+
+        double[] darr = new double[100]; 
+        int[] iarr = new int[500];
+
+        Arrays.sort(darr); // sorts double array
+        Arrays.sort(iarr); // sorts int array 
+
+        // type cast 
+        double d = 29.39; 
+        int nd = (int) d; // --> 29
     }
 }
